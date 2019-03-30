@@ -1,9 +1,9 @@
 import React from 'react';
-import HelloWorld from './HelloWorld';
+import HelloWorldList from './HelloWorldList';
 import './App.css';
 
 const App = () => {
-  return (<div classname="App"><HelloWorld name="Jack"/></div>);
+  return (<div classname="App"><HelloWorldList /></div>);
 };
 
 export default App;

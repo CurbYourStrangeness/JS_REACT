@@ -1,8 +1,8 @@
 import React from 'react';
 import './HelloWorld.css';
 
-const HelloWorld = () => {
-  return (<div classname="HelloWorld">Hello World!</div>);
+const HelloWorld = props => {
+  return (<div classname="HelloWorld">Hello {props.name}!</div>);
 };
 
 export default HelloWorld;

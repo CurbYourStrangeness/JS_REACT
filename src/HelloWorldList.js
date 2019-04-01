@@ -5,8 +5,13 @@ import HelloWorld from './HelloWorld';
 
 class HelloWorldList extends Component {
   
+  addGreeting(newName) {
+   this.setState({ greetings: [...this.state.greetings, newName] });
+  }
+
   constructor(props) {
     super(props);
+    this.addGreeting = this.addGreeting.bind(this);
     this.state = { greetings: ['Jake', 'Jack', 'Bender', 'Wiz'] };
   }
 
@@ -19,7 +24,7 @@ class HelloWorldList extends Component {
   render() {
     return (
       <div className="HelloWorldList">
-        <AddGreeter />
+        <AddGreeter addGreeting={this.addGreeting}/>
         {this.renderGreetings()}
       </div>
     );

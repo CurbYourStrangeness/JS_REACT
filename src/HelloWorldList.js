@@ -7,7 +7,7 @@ class HelloWorldList extends Component {
   
   constructor(props) {
     super(props);
-    this.state = { greetings: ['Jake', 'Jack'] };
+    this.state = { greetings: ['Jake', 'Jack', 'Bender', 'Wiz'] };
   }
 
   renderGreetings(){

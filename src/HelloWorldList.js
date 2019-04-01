@@ -10,11 +10,16 @@ class HelloWorldList extends Component {
     this.state = { greetings: ['Jake', 'Jack'] };
   }
 
+  renderGreetings(){
+    return this.state.greetings.map(name => (
+      <HelloWorld key={name} name={name}/>
+    ));
+}
+
   render() {
     return (
       <div className="HelloWorldList">
-        <HelloWorld name="Jake"/>
-        <HelloWorld name="Jack"/>
+        {this.renderGreetings()}
       </div>
     );
   }
